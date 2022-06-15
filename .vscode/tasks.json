@@ -1,0 +1,156 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    // ----------------------------- LOVE2D TASKS
+    {
+      "label": "buildLove2d",
+      "type": "shell",
+      "command": "lua build-love2d.lua",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+        },
+      }
+    },
+    {
+      "label": "runLove2d",
+      "type": "shell",
+      "command": "love _game",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "buildRunLove2d",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "buildLove2d",
+        "runLove2d",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    // ----------------------------- PLAYDATE TASKS
+    {
+      "label": "buildPlaydate",
+      "type": "shell",
+      "command": "lua build-playdate.lua",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        }
+      }
+    },
+    {
+      "label": "buildPdx",
+      "type": "shell",
+      "command": "rmdir _game.pdx /s /q & pdc _pdx _game.pdx",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "runSimulator",
+      "type": "shell",
+      "command": "PlaydateSimulator _game.pdx",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "buildRunSimulator",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "buildPlaydate",
+        "buildPdx",
+        "runSimulator",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    // ----------------------------- LOVE2D & PLAYDATE TASKS
+    {
+      "label": "buildRunLove2dSimulator",
+      "type": "shell",
+      "dependsOn": [
+        "buildRunSimulator",
+        "buildRunLove2d",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}
