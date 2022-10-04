@@ -16,6 +16,7 @@ build.build({
     -- project
     { "src/fonts", "fonts" },
     { "src/textures", "textures" },
+    { "src/sounds", "sounds" },
     { "src/main.lua", "main.lua" },
     { "src/pdxinfo.txt", "pdxinfo" }, -- .txt is work around for this being detected as folder
   },

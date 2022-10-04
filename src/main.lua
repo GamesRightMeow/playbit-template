@@ -7,6 +7,9 @@ local image = playdate.graphics.image.new("textures/playbit-logo")
 local font = playdate.graphics.font.new("fonts/Roobert/Roobert-11-Mono-Condensed")
 playdate.graphics.setFont(font)
 
+local startupSfx = playdate.sound.sampleplayer.new("sounds/playbit-startup")
+startupSfx:play()
+
 function playdate.update()
   image:draw(0, 0)
 
