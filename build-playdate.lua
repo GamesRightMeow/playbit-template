@@ -5,6 +5,7 @@ build.build({
   debug = false,
   platform = "playdate",
   output = "_pdx\\",
+  clearBuildFolder = true,
   fileProcessors = {
     lua = build.luaProcessor,
     wav = build.waveProcessor,

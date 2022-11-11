@@ -5,6 +5,7 @@ build.build({
   debug = true,
   platform = "love2d",
   output = "_love2d",
+  clearBuildFolder = true,
   fileProcessors = {
     lua = build.luaProcessor,
     fnt = build.fntProcessor,
