@@ -1,4 +1,8 @@
+# used for temp file output during build process
 _tmp/*
-_game.pdx/*
-_game/*
+# project output after preprocessesing for Playdate
 _pdx/*
+# actual pdx that you can run on-device/in-simulator
+*.pdx/*
+# project output after preprocessesing for Love2d
+_love2d/*

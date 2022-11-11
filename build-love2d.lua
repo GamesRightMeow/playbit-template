@@ -4,7 +4,7 @@ build.build({
   assert = true,
   debug = true,
   platform = "love2d",
-  output = "_game",
+  output = "_love2d",
   fileProcessors = {
     lua = build.luaProcessor,
     fnt = build.fntProcessor,

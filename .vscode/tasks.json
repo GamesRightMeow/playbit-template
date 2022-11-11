@@ -5,7 +5,7 @@
   "tasks": [
     // ----------------------------- LOVE2D TASKS
     {
-      "label": "buildLove2d",
+      "label": "love2d: build",
       "type": "shell",
       "command": "lua build-love2d.lua",
       "presentation": {
@@ -29,10 +29,11 @@
         },
       }
     },
+    // TODO: compile task to build into standalone executable
     {
-      "label": "runLove2d",
+      "label": "love2d: run",
       "type": "shell",
-      "command": "love _game",
+      "command": "love _love2d",
       "presentation": {
         "echo": true,
         "reveal": "always",
@@ -44,12 +45,12 @@
       "problemMatcher": []
     },
     {
-      "label": "buildRunLove2d",
+      "label": "love2d: build & run",
       "type": "shell",
       "dependsOrder": "sequence",
       "dependsOn": [
-        "buildLove2d",
-        "runLove2d",
+        "love2d: build",
+        "love2d: run",
       ],
       "presentation": {
         "echo": true,
@@ -63,7 +64,7 @@
     },
     // ----------------------------- PLAYDATE TASKS
     {
-      "label": "buildPlaydate",
+      "label": "playdate: build",
       "type": "shell",
       "command": "lua build-playdate.lua",
       "presentation": {
@@ -88,9 +89,9 @@
       }
     },
     {
-      "label": "buildPdx",
+      "label": "playdate: compile",
       "type": "shell",
-      "command": "rmdir _game.pdx /s /q & pdc _pdx _game.pdx",
+      "command": "rmdir ${workspaceFolderBasename}.pdx /s /q & pdc _pdx ${workspaceFolderBasename}.pdx",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -102,9 +103,9 @@
       "problemMatcher": []
     },
     {
-      "label": "runSimulator",
+      "label": "playdate: run",
       "type": "shell",
-      "command": "PlaydateSimulator _game.pdx",
+      "command": "PlaydateSimulator ${workspaceFolderBasename}.pdx",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -116,13 +117,13 @@
       "problemMatcher": []
     },
     {
-      "label": "buildRunSimulator",
+      "label": "playdate: build & run",
       "type": "shell",
       "dependsOrder": "sequence",
       "dependsOn": [
-        "buildPlaydate",
-        "buildPdx",
-        "runSimulator",
+        "playdate: build",
+        "playdate: compile",
+        "playdate: run",
       ],
       "presentation": {
         "echo": true,
@@ -136,11 +137,11 @@
     },
     // ----------------------------- LOVE2D & PLAYDATE TASKS
     {
-      "label": "buildRunLove2dSimulator",
+      "label": "all: run & build",
       "type": "shell",
       "dependsOn": [
-        "buildRunSimulator",
-        "buildRunLove2d",
+        "playdate: build & run",
+        "love2d: build & run",
       ],
       "presentation": {
         "echo": true,
