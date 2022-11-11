@@ -60,6 +60,10 @@
         "showReuseMessage": true,
         "clear": false
       },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "problemMatcher": []
     },
     // ----------------------------- PLAYDATE TASKS
