@@ -1,17 +1,15 @@
 @@"playbit/header.lua"
 
 @@IMPORT("CoreLibs/graphics")
-
-local image = playdate.graphics.image.new("textures/playbit-logo")
+@@IMPORT("scripts/playbit-intro")
 
 local font = playdate.graphics.font.new("fonts/Roobert/Roobert-11-Mono-Condensed")
 playdate.graphics.setFont(font)
 
-local startupSfx = playdate.sound.sampleplayer.new("sounds/playbit-startup")
-startupSfx:play()
+playbitIntro.init()
 
 function playdate.update()
-  image:draw(0, 0)
+  playbitIntro.update()
 
 !if DEBUG then
   font:drawText("debug build", 0, 0)
