@@ -3,11 +3,172 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-    // ----------------------------- LOVE2D TASKS
+    // ██████╗ ██╗   ██╗██╗██╗     ██████╗     ████████╗ █████╗ ███████╗██╗  ██╗███████╗
+    // ██╔══██╗██║   ██║██║██║     ██╔══██╗    ╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝
+    // ██████╔╝██║   ██║██║██║     ██║  ██║       ██║   ███████║███████╗█████╔╝ ███████╗
+    // ██╔══██╗██║   ██║██║██║     ██║  ██║       ██║   ██╔══██║╚════██║██╔═██╗ ╚════██║
+    // ██████╔╝╚██████╔╝██║███████╗██████╔╝       ██║   ██║  ██║███████║██║  ██╗███████║
+    // ╚═════╝  ╚═════╝ ╚═╝╚══════╝╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+    // build tasks you'll normally be using - prepended with ! to make them sort higher in task lists
+
+    // ---- LOVE2d
     {
-      "label": "love2d: build",
+      "label": "! love2d: debug",
       "type": "shell",
-      "command": "lua build-love2d.lua",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "love2d: build debug",
+        "love2d: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "! love2d: release",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "love2d: build release",
+        "love2d: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    // ---- PLAYDATE
+    {
+      "label": "! playdate: debug",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "playdate: build debug",
+        "playdate: compile",
+        "playdate: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "! playdate: release",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "playdate: build release",
+        "playdate: compile",
+        "playdate: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    // ----------------------------- LOVE2D & PLAYDATE TASKS
+    {
+      "label": "! all: debug",
+      "type": "shell",
+      "dependsOn": [
+        "! playdate: debug",
+        "! love2d: debug",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "! all: release",
+      "type": "shell",
+      "dependsOn": [
+        "! playdate: release",
+        "! love2d: release",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+
+    // ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗     ████████╗ █████╗ ███████╗██╗  ██╗███████╗
+    // ██║  ██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗    ╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝
+    // ███████║█████╗  ██║     ██████╔╝█████╗  ██████╔╝       ██║   ███████║███████╗█████╔╝ ███████╗
+    // ██╔══██║██╔══╝  ██║     ██╔═══╝ ██╔══╝  ██╔══██╗       ██║   ██╔══██║╚════██║██╔═██╗ ╚════██║
+    // ██║  ██║███████╗███████╗██║     ███████╗██║  ██║       ██║   ██║  ██║███████║██║  ██╗███████║
+    // ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+    // you normally won't want to run these on their own  
+
+    // ---- LOVE2d
+    {
+      "label": "love2d: build debug",
+      "type": "shell",
+      "command": "lua build/love2d-debug.lua",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+        },
+      }
+    },
+    {
+      "label": "love2d: build release",
+      "type": "shell",
+      "command": "lua build/love2d-release.lua",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -44,14 +205,12 @@
       },
       "problemMatcher": []
     },
+    
+    // ---- PLAYDATE TASKS
     {
-      "label": "love2d: build & run",
+      "label": "playdate: build debug",
       "type": "shell",
-      "dependsOrder": "sequence",
-      "dependsOn": [
-        "love2d: build",
-        "love2d: run",
-      ],
+      "command": "lua build/playdate-debug.lua",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -60,17 +219,23 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        }
+      }
     },
-    // ----------------------------- PLAYDATE TASKS
     {
-      "label": "playdate: build",
+      "label": "playdate: build release",
       "type": "shell",
-      "command": "lua build-playdate.lua",
+      "command": "lua build/playdate-release.lua",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -120,42 +285,5 @@
       },
       "problemMatcher": []
     },
-    {
-      "label": "playdate: build & run",
-      "type": "shell",
-      "dependsOrder": "sequence",
-      "dependsOn": [
-        "playdate: build",
-        "playdate: compile",
-        "playdate: run",
-      ],
-      "presentation": {
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
-      "problemMatcher": []
-    },
-    // ----------------------------- LOVE2D & PLAYDATE TASKS
-    {
-      "label": "all: run & build",
-      "type": "shell",
-      "dependsOn": [
-        "playdate: build & run",
-        "love2d: build & run",
-      ],
-      "presentation": {
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
-      "problemMatcher": []
-    }
   ]
 }
