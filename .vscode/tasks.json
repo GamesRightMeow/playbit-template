@@ -35,6 +35,28 @@
       "problemMatcher": []
     },
     {
+      "label": "! love2d: scripts only",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "love2d: build scripts only",
+        "love2d: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "! love2d: release",
       "type": "shell",
       "dependsOrder": "sequence",
@@ -63,6 +85,25 @@
       "dependsOrder": "sequence",
       "dependsOn": [
         "playdate: build debug",
+        "playdate: compile",
+        "playdate: run",
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "! playdate: scripts only",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "playdate: build scripts only",
         "playdate: compile",
         "playdate: run",
       ],
@@ -166,6 +207,31 @@
       }
     },
     {
+      "label": "love2d: build scripts only",
+      "type": "shell",
+      "command": "lua build/love2d-scripts-only.lua",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+        },
+      }
+    },
+    {
       "label": "love2d: build release",
       "type": "shell",
       "command": "lua build/love2d-release.lua",
@@ -211,6 +277,31 @@
       "label": "playdate: build debug",
       "type": "shell",
       "command": "lua build/playdate-debug.lua",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": ["relative", "${workspaceFolder}"],
+        "pattern": {
+          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        }
+      }
+    },
+    {
+      "label": "playdate: build scripts only",
+      "type": "shell",
+      "command": "lua build/playdate-scripts-only.lua",
       "presentation": {
         "echo": true,
         "reveal": "silent",
