@@ -20,6 +20,10 @@ build.build({
     { "src/sounds", "sounds" },
     { "src/main.lua", "main.lua" },
     { "src/scripts", "scripts" },
-    { "src/pdxinfo.txt", "pdxinfo" }, -- .txt is work around for this being detected as folder
+    { "src/metadata.json", "pdxinfo",
+      {
+        json = { build.pdxinfoProcessor, { incrementBuildNumber = true } }
+      }
+    }
   },
 })

@@ -23,5 +23,10 @@ build.build({
     { "src/sounds", "sounds" },
     { "src/scripts", "scripts" },
     { "src/main.lua", "main.lua" },
+    { "src/metadata.json", "pdxinfo",
+      {
+        json = { build.pdxinfoProcessor, { incrementBuildNumber = false } }
+      }
+    }
   },
 })
