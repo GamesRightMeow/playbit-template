@@ -10,7 +10,6 @@
     // ██████╔╝╚██████╔╝██║███████╗██████╔╝       ██║   ██║  ██║███████║██║  ██╗███████║
     // ╚═════╝  ╚═════╝ ╚═╝╚══════╝╚═════╝        ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
     // build tasks you'll normally be using - prepended with ! to make them sort higher in task lists
-
     // ---- LOVE2d
     {
       "label": "! love2d: debug",
@@ -32,7 +31,21 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "! love2d: scripts only",
@@ -54,7 +67,21 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "! love2d: release",
@@ -76,7 +103,21 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     // ---- PLAYDATE
     {
@@ -96,7 +137,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "! playdate: scripts only",
@@ -115,7 +170,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "! playdate: release",
@@ -134,7 +203,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     // ----------------------------- LOVE2D & PLAYDATE TASKS
     {
@@ -152,7 +235,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "! all: release",
@@ -169,9 +266,22 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
-
     // ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗     ████████╗ █████╗ ███████╗██╗  ██╗███████╗
     // ██║  ██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗    ╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝
     // ███████║█████╗  ██║     ██████╔╝█████╗  ██████╔╝       ██║   ███████║███████╗█████╔╝ ███████╗
@@ -179,7 +289,6 @@
     // ██║  ██║███████╗███████╗██║     ███████╗██║  ██║       ██║   ██║  ██║███████║██║  ██╗███████║
     // ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝       ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
     // you normally won't want to run these on their own  
-
     // ---- LOVE2d
     {
       "label": "love2d: build debug",
@@ -195,14 +304,17 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
-            "file": 2,
-            "line": 3,
-            "column": 5,
-            "severity": 1,
-            "message": 4
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
         },
       }
     },
@@ -220,14 +332,17 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
-            "file": 2,
-            "line": 3,
-            "column": 5,
-            "severity": 1,
-            "message": 4
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
         },
       }
     },
@@ -245,14 +360,17 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-            "regexp": "^(.*) @ (.*):(\\d*): (.*)$",
-            "file": 2,
-            "line": 3,
-            "column": 5,
-            "severity": 1,
-            "message": 4
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
         },
       }
     },
@@ -269,9 +387,22 @@
         "showReuseMessage": true,
         "clear": true
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
-    
     // ---- PLAYDATE TASKS
     {
       "label": "playdate: build debug",
@@ -287,15 +418,18 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
           "file": 2,
           "line": 3,
           "column": 5,
           "severity": 1,
           "message": 4
-        }
+        },
       }
     },
     {
@@ -312,15 +446,18 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
           "file": 2,
           "line": 3,
           "column": 5,
           "severity": 1,
           "message": 4
-        }
+        },
       }
     },
     {
@@ -337,15 +474,18 @@
       },
       "problemMatcher": {
         "owner": "lua",
-        "fileLocation": ["relative", "${workspaceFolder}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
         "pattern": {
-          "regexp": "^(.*) @ (.*\\.lua):(\\d*): (.*)$",
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
           "file": 2,
           "line": 3,
           "column": 5,
           "severity": 1,
           "message": 4
-        }
+        },
       }
     },
     {
@@ -360,7 +500,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
     {
       "label": "playdate: run",
@@ -374,7 +528,21 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": []
+      "problemMatcher": {
+        "owner": "lua",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*): (.*):(\\d+): (.*)$",
+          "file": 2,
+          "line": 3,
+          "column": 5,
+          "severity": 1,
+          "message": 4
+        },
+      }
     },
   ]
 }
