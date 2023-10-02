@@ -1,7 +1,7 @@
 @@"playbit/header.lua"
 
-@@IMPORT("CoreLibs/graphics")
-@@IMPORT("scripts/playbit-intro")
+import("CoreLibs/graphics")
+import("scripts/playbit-intro")
 
 local font = playdate.graphics.font.new("fonts/Roobert/Roobert-11-Mono-Condensed")
 playdate.graphics.setFont(font)
