@@ -70,4 +70,5 @@
     // fixes errors regarding preproccessors, but we lose all diagnostics :(
     "Lua.diagnostics.enable": false,
     "editor.suggest.showWords": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
   }
