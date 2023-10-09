@@ -31,21 +31,38 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "! love2d: scripts only",
@@ -67,21 +84,38 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "! love2d: release",
@@ -103,21 +137,38 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     // ---- PLAYDATE
     {
@@ -137,21 +188,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "! playdate: scripts only",
@@ -170,21 +238,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "! playdate: release",
@@ -203,21 +288,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     // ----------------------------- LOVE2D & PLAYDATE TASKS
     {
@@ -235,21 +337,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "! all: release",
@@ -266,21 +385,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     // ██╗  ██╗███████╗██╗     ██████╗ ███████╗██████╗     ████████╗ █████╗ ███████╗██╗  ██╗███████╗
     // ██║  ██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗    ╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝██╔════╝
@@ -302,21 +438,38 @@
         "showReuseMessage": true,
         "clear": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "love2d: build scripts only",
@@ -330,21 +483,38 @@
         "showReuseMessage": true,
         "clear": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "love2d: build release",
@@ -358,21 +528,38 @@
         "showReuseMessage": true,
         "clear": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     // TODO: compile task to build into standalone executable
     {
@@ -387,21 +574,38 @@
         "showReuseMessage": true,
         "clear": true
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     // ---- PLAYDATE TASKS
     {
@@ -416,21 +620,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "playdate: build scripts only",
@@ -444,21 +665,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "playdate: build release",
@@ -472,21 +710,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "playdate: compile",
@@ -500,21 +755,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
     {
       "label": "playdate: run",
@@ -528,21 +800,38 @@
         "showReuseMessage": true,
         "clear": false
       },
-      "problemMatcher": {
-        "owner": "lua",
-        "fileLocation": [
-          "relative",
-          "${workspaceFolder}"
-        ],
-        "pattern": {
-          "regexp": "^(.*): (.*):(\\d+): (.*)$",
-          "file": 2,
-          "line": 3,
-          "column": 5,
-          "severity": 1,
-          "message": 4
+      "problemMatcher": [
+        // lua preprocess errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.+) @ <meta>:(\\d+): (.*)$",
+            "line": 2,
+            "severity": 1,
+            "message": 3
+          },
         },
-      }
+        // lua compiler errors
+        {
+          "owner": "lua",
+          "fileLocation": [
+            "relative",
+            "${workspaceFolder}"
+          ],
+          "pattern": {
+            "regexp": "^(.*): (.*):(\\d+): (.*)$",
+            "file": 2,
+            "line": 3,
+            "column": 5,
+            "severity": 1,
+            "message": 4
+          },
+        }
+      ]
     },
   ]
 }
