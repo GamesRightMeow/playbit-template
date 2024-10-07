@@ -3,7 +3,7 @@
 import("CoreLibs/graphics")
 import("scripts/playbit-intro")
 
-local font = playdate.graphics.font.new("fonts/Roobert/Roobert-11-Mono-Condensed")
+local font = playdate.graphics.font.new("fonts/Phozon/Phozon")
 playdate.graphics.setFont(font)
 
 playbitIntro.init()
@@ -15,5 +15,5 @@ function playdate.update()
   font:drawText("debug build", 0, 0)
 !end
 
-font:drawTextAligned(playdate.metadata.version.." ("..playdate.metadata.buildNumber..")", 400, 0, 1)
+font:drawTextAligned(playdate.metadata.version.." ["..playdate.metadata.buildNumber.."]", 400, 0, 1)
 end
