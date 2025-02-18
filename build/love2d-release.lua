@@ -9,7 +9,7 @@ build.build({
   fileProcessors = {
     lua = build.luaProcessor,
     fnt = build.fntProcessor,
-    aseprite = build.asepriteProcessor,
+    aseprite = build.skipFile,
   },
   files = {
     -- essential playbit files for love2d
