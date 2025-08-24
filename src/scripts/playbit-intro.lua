@@ -1,6 +1,5 @@
 -- This is the Playbit intro sequence/splash. Use it in your project if you'd like to show that you've used Playbit!
-import("CoreLibs/image")
-import("CoreLibs/sound")
+import("CoreLibs/graphics")
 
 module = {}
 playbitIntro = module
