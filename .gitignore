@@ -6,3 +6,4 @@ _pdx/*
 *.pdx/*
 # project output after preprocessesing for Love2d
 _love2d/*
+.sentry-native/*
