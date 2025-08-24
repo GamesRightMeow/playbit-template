@@ -1,6 +1,9 @@
 @@"playbit/header.lua"
 
 import("CoreLibs/graphics")
+import("CoreLibs/font")
+import("CoreLibs/object")
+import("CoreLibs/metadata")
 import("scripts/playbit-intro")
 
 local font = playdate.graphics.font.new("fonts/Phozon/Phozon")
