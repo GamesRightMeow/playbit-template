@@ -4,9 +4,6 @@ import("CoreLibs/graphics")
 import("CoreLibs/object")
 import("scripts/playbit-intro")
 
-local font = playdate.graphics.font.new("fonts/Phozon/Phozon")
-playdate.graphics.setFont(font)
-
 playbitIntro.init()
 
 function playdate.update()

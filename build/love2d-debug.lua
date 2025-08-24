@@ -17,8 +17,8 @@ build.build({
     { "playbit/playbit", "playbit" },
     { "playbit/playdate", "playdate" },
     { "playbit/json/json.lua", "json/json.lua" },
+    { "playbit/fonts", "fonts" },
     -- project
-    { "src/fonts", "fonts" },
     { "src/textures", "textures" },
     { "src/sounds", "sounds" },
     { "src/scripts", "scripts" },
