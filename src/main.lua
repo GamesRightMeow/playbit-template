@@ -13,5 +13,5 @@ function playdate.update()
   playdate.graphics.drawText("debug build", 0, 0)
 !end
 
-playdate.graphics.drawTextAligned(playdate.metadata.version.." ["..playdate.metadata.buildNumber.."]", 400, 0, 1)
+ playdate.graphics.drawTextAligned(playdate.metadata.version.." ["..playdate.metadata.buildNumber.."]", 400, 0, 1)
 end
